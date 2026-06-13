@@ -6,21 +6,24 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-# pacman -Syu --noconfirm PACKAGESHERE
+pacman -Syu --noconfirm patchelf libnss_nis nss-mdns nss
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-# Comment this out if you need an AUR package
-#make-aur-package PACKAGENAME
+echo "Getting binary..."
+echo "---------------------------------------------------------------"
+case "$ARCH" in
+	x86_64)  farch=x64;;
+	aarch64) farch=arm;;
+esac
+BASE_URL="https://antigravity.google"
+link=$(curl -sL --compressed "$BASE_URL/$(curl -sL --compressed "$BASE_URL/download" | grep -oP 'main-[A-Z0-9]+\.js' | head -1)" | grep -oP "https://storage\.googleapis\.com[^\"]+linux-${farch}/Antigravity\.tar\.gz" | head -1)
 
-# If the application needs to be manually built that has to be done down here
+curl -sSfL --retry 30 --retry-connrefused "$link" -o /tmp/temp.tar.gz
+echo "$(echo "$link" | grep -oP 'antigravity-hub/\K[0-9]+\.[0-9]+\.[0-9]+')" > ~/version
 
-# if you also have to make nightly releases check for DEVEL_RELEASE = 1
-#
-# if [ "${DEVEL_RELEASE-}" = 1 ]; then
-# 	nightly build steps
-# else
-# 	regular build steps
-# fi
+mkdir -p ./AppDir/bin
+curl -sL "https://aur.archlinux.org/cgit/aur.git/plain/antigravity.desktop?h=antigravity" | sed 's|^Exec=/usr/bin/|Exec=|g' > ./AppDir/antigravity.desktop
+tar -xvzf /tmp/temp.tar.gz --strip-components=1 -C ./AppDir/bin
