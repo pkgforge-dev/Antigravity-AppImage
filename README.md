@@ -2,9 +2,9 @@
 
 # Antigravity AppImage 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/mnalmahmud/Antigravity-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/mnalmahmud/Antigravity-AppImage/releases/latest)
-[![CI Build Status](https://github.com/mnalmahmud/Antigravity-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/mnalmahmud/Antigravity-AppImage/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/mnalmahmud/Antigravity-AppImage)](https://github.com/mnalmahmud/Antigravity-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Antigravity-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Antigravity-AppImage/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/Antigravity-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Antigravity-AppImage/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Antigravity-AppImage)](https://github.com/pkgforge-dev/Antigravity-AppImage/releases/latest)
 
 <p align="center">
   <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Faur.archlinux.org%2Fcgit%2Faur.git%2Fplain%2Fantigravity.png%3Fh%3Dantigravity&f=1" width="128" />
@@ -13,7 +13,7 @@
 
 | Latest Stable Release | Upstream URL |
 | :---: | :---: |
-| [Click here](https://github.com/mnalmahmud/Antigravity-AppImage/releases/latest) | [Click here](https://antigravity.google/download) |
+| [Click here](https://github.com/pkgforge-dev/Antigravity-AppImage/releases/latest) | [Click here](https://antigravity.google/download) |
 
 </div>
 
