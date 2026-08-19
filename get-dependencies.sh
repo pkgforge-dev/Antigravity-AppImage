@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm patchelf libnss_nis nss-mdns nss
+pacman -Syu --noconfirm patchelf libnss_nis nss-mdns nss bubblewrap
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
